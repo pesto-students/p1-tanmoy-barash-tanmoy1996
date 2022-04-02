@@ -10,7 +10,7 @@ e.Script Processors
 f.Tree constructiong.Order of script processing
 h.Layout and Painting
 
-![](images/domain.png)
+![](../images/domain.png)
 
 The browser's main functionality
 The main function is to retrieve information from the World Wide Web and making it available for users.The information is generally an HTML document, PDF, image, or some other type of content.
