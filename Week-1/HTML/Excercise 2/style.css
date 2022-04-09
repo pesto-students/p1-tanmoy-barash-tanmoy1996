@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+}
+main{
+    height:80vh;
+    display: flex;
+    width: 100%;
+}
+nav{
+    background-color: #ececec;
+    height: 100%;
+    width:2%;
+}
+nav>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+nav>ul>li{
+    text-align: center;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+h1+p{
+    margin-top: 10px;
+}
+.content{
+    height: auto;
+    width:98%;
+}
+.currentSong{
+    background-color: rgb(66, 61, 61);
+    color: rgb(253, 255, 240);
+    display: flex;
+    padding: 30px;
+}
+.songName{
+    padding-left: 30px;
+    position: relative;
+}
+.options{
+    position: absolute;
+    bottom:0px;
+}
+.options>ul{
+    display: flex;
+    list-style: none;
+}
+.options>ul>li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 99%;
+    margin: 0.5%;
+}
+td{
+    padding: 16px;
+}
+tr:nth-child(even) {
+background-color: #ececec;
+}
+td>a{
+    padding: 2px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: blue;
+}
+footer{
+    background-color: #43689B;
+    height: 20vh;
+    display: flex;
+    color: rgb(253, 255, 240);
+    position: relative;
+}
+footer>img{
+    height: 80%;
+    margin: 20px;
+}
+footer>div{
+    align-self: center;
+}
+footer>div>p{
+    line-height: 3rem;
+}
+.playOptions{
+    position: absolute;
+    right:0;
+    width: 50%;
+    align-self: center;    
+}
+.playOptions>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
