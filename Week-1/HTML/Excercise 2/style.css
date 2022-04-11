@@ -8,12 +8,16 @@ main{
     display: flex;
     width: 100%;
 }
-nav{
+h1+p{
+    margin-top: 10px;
+}
+
+.menu{
     background-color: #ececec;
     height: 100%;
     width:2%;
 }
-nav>ul{
+.menu__list{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -21,59 +25,60 @@ nav>ul{
     width: 100%;
     height: 100%;
 }
-nav>ul>li{
+.menu__list__item{
     text-align: center;
 }
-nav>ul>li>a{
+.menu__list__item .link{
     text-decoration: none;
     color: black;
 }
-h1+p{
-    margin-top: 10px;
-}
+
 .content{
     height: auto;
     width:98%;
 }
-.currentSong{
+.content__active{
     background-color: rgb(66, 61, 61);
     color: rgb(253, 255, 240);
     display: flex;
     padding: 30px;
 }
-.songName{
+.content__active__details{
     padding-left: 30px;
     position: relative;
 }
-.options{
+
+.iconset{
     position: absolute;
     bottom:0px;
 }
-.options>ul{
+.iconset__list{
     display: flex;
     list-style: none;
 }
-.options>ul>li{
+.iconset__list__item{
     padding-left: 20px;
     padding-right: 20px;
 }
-table {
+
+.tab {
     border-collapse: collapse;
     width: 99%;
     margin: 0.5%;
 }
-td{
+.tab__row:nth-child(even) {
+    background-color: #ececec;
+    }
+.tab__row__col{
     padding: 16px;
 }
-tr:nth-child(even) {
-background-color: #ececec;
-}
-td>a{
+.tab__row__col .link{
     padding: 2px;
     border: 1px solid black;
     text-decoration: none;
     color: blue;
 }
+
 footer{
     background-color: #43689B;
     height: 20vh;
@@ -81,23 +86,23 @@ footer{
     color: rgb(253, 255, 240);
     position: relative;
 }
-footer>img{
+.footer__img{
     height: 80%;
     margin: 20px;
 }
-footer>div{
+.footer__content{
     align-self: center;
 }
-footer>div>p{
+.footer__content__text{
     line-height: 3rem;
 }
-.playOptions{
+.footer__iconset{
     position: absolute;
     right:0;
     width: 50%;
     align-self: center;    
 }
-.playOptions>ul{
+.footer__iconset__list{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
