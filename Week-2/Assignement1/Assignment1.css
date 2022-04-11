@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-header, section{
+.heading, .subHeading{
     background: rgb(242, 233, 250);
     text-align: center;
     padding-top: 0.5rem;
@@ -10,73 +10,77 @@ header, section{
     margin: auto;
     font-family: 'Times New Roman', Times, serif;
 }
-header{
+.heading{
     padding-left: 35%;
     padding-right: 35%;
     padding-top: 2rem;
 }
-section{
+.subHeading{
     font-size: 1.1rem;
     font-weight: 100;
     padding-left: 32%;
     padding-right: 32%;
     padding-bottom: 2rem;
 }
-.column{
+.container{
     display: grid;
     grid-template-columns: 1fr 1fr
 }
-.column>section{
+.container__section{
     padding: 0;
     margin: 0;
     background: none;
 }
-.column>section>img{
+.container__section__img{
     width: 96%;
     padding: 2%;
+    border-radius: 25px;
 }
-article{
+
+.card{
     margin: 1rem;
     padding: 1rem;
     background: rgba(231, 231, 231, 0.603);
     border: 1px rgb(231, 231, 231, 0.603) solid;
     border-radius: 5px;
 }
-article h2{
+.card__title{
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-article p{
+.card__text{
     padding-bottom: 1rem;
 }
-form{
+
+.form{
     background-color: antiquewhite;
     width: 350px;
     padding: 2rem;
     margin: 1rem;
     border-radius: 5px;
 }
-fieldset{
+.form__inputSet{
     display: flex;
     padding: 0.2rem;
     border-radius: 5px;
     margin-bottom: 5px;
 }
-fieldset label{
+.form__inputSet__input{
     padding: 0.5rem;
 }
-form>label{
+.form__textField{
     display: flex;
     padding: 0.5rem;
 }
-label p{
+.form__textField__checkBox{
+    display: block;
+    margin-right:10px;
+}
+.form__textField__label{
     width:150px;
     padding-left: 4px;
 }
-.check>input{
-    margin-right:10px;
-}
-button{
+.form__submit{
     padding: 8px;
     text-transform: uppercase;
     font-weight: 700;
@@ -84,32 +88,32 @@ button{
     border-radius: 5px;
     border: 1px solid rgb(141, 141, 141);
 }
-footer{
+.footer{
     text-align: center;
     background: rgb(242, 233, 250);
     padding-bottom: 10px;
 }
 @media screen and (max-width: 862px) {
-    header{
+    .heading{
         padding-left: 16%;
         padding-right: 16%;
         padding-top: 2rem;
     }
-    section{
+    .subHeading{
         font-size: 1.1rem;
         font-weight: 100;
         padding-left: 18%;
         padding-right: 18%;
         padding-bottom: 2rem;
     }
-    .column{
+    .container{
         display: grid;
         grid-template-columns: 1fr;
     }
-    form{
+    .form{
         width: auto;
         padding: 1rem;
         margin: 1rem;
         border-radius: 5px;
     }
-  }
+}
