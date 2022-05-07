@@ -13,6 +13,7 @@
     height:70vh;
     margin: 15vh 15vw;
     display: flex;
+    flex-wrap: nowrap
 }
 .gallery{
     width:100%;
@@ -83,3 +84,10 @@
     background-color: #4cd964;
 
 }
+@media screen and (max-width: 750px) {
+    .content{
+        margin: 1rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
