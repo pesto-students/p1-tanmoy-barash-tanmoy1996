@@ -4,6 +4,10 @@ class AddTask extends Component{
   handleSubmit(e){
     e.preventDefault();
     var form =e.target;
+    if(form.title.value==''){
+      window.alert("Please enter Task Title");
+      return;
+    }
     const {tasks,newTask} = this.props;
     var task = {
       title: form.title.value,
@@ -37,7 +41,7 @@ class AddTask extends Component{
                 rows="4"
                 type="text-area"
                 name="desc"
-                placeholder='Task Desc'
+                placeholder='Task Details'
                 />
             </fieldset>
                 <div className="d-flex">
