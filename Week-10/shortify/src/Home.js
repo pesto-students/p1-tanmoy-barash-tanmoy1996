@@ -2,22 +2,50 @@ import {useState} from 'react';
 import {GoArrowRight} from 'react-icons/go';
 import homeImg from './assets/homePageImg.svg';
 import ShortList from './components/ShortList';
+import LinearLoader from './components/LinearLoader';
+import axios from 'axios';
 import './styles/Home.css'
 
 
 function Home() {
-  const [list, setList] = useState([
+  const [state, setState] = useState(
     {
-      full_short_link: "https://shrtco.de/KCveN",
-      original_link: "http://example.org/very/long/link.html",
-      id:1
-    },
-    {
-      full_short_link: "https://shrtco.de/KCveN",
-      original_link: "http://example.org/very/long/link.html",
-      id:2
+      list:[],
+      loading:false,
     }
-  ])
+  )
+
+  function handleSubmit(e){
+    e.preventDefault();
+    setState({
+      ...state,
+      loading:true})
+    var original=e.target.urlInput.value;
+    axios.post(`https://api.shrtco.de/v2/shorten?url=${original}`)
+    .then((res)=>{
+      if(res.data.ok){
+        var listItem = {
+          id: state.list.length>0?state.list[state.list.length-1].id+1:1,
+          full_short_link:res.data.result.full_short_link,
+          original_link:res.data.result.original_link,
+        }
+        state.list.push(listItem);
+      }
+      setState({
+        list:state.list,
+        loading:false
+      })
+      e.target.urlInput.value='';
+    })
+    .catch((err)=>{
+      console.log(err);
+      setState({
+        list:state.list,
+        loading:false
+      })
+    })
+  }
+
   return (
       <div className="home">
         <img className="landingImg" 
@@ -29,15 +57,16 @@ function Home() {
             shorter and easier to remember. When visiting the 
             short-Link, the short-Link will immediately redirect 
             you to the long Link.</p>
-          <div className="receiveUrl">
+          <form className="receiveUrl" onSubmit={(e)=>handleSubmit(e)}>
             <fieldset className="textfield">
-              <input type="text" placeholder="example.com" id="urlInput" name="URL"/>
+              <input type="text" placeholder="example.com" name="urlInput"/>
             </fieldset>
-            <button className="submitBtn">
+            <button disabled={state.loading} className="submitBtn">
               <GoArrowRight/>
             </button>
-          </div>
-          <ShortList list={list}/>
+          </form>
+          { state.loading && <LinearLoader/>}
+          <ShortList list={state.list}/>
         </div>
       </div>
     );

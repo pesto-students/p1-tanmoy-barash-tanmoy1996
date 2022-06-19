@@ -3,13 +3,18 @@
   min-height:100vh;
   padding: 0 128px;
 }
+@media screen and (max-width: 1300px) {
+  .App{
+    padding: 0 64px;
+  }
+}
 @media screen and (max-width: 992px) {
   .App{
     padding: 0 32px;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 450px) {
   .App{
-    padding: 0 64px;
+    padding: 0 8px;
   }
 }

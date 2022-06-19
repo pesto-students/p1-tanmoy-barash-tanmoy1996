@@ -59,3 +59,10 @@
     background: rgb(35, 38, 83);
     color: white;
 }
+@media screen and (max-width: 450px) {
+    .nav--link-item{
+        margin: 0 4px;
+        padding: 10px 4px;
+        
+    }
+}

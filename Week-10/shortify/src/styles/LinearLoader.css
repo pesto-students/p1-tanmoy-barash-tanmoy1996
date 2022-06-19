@@ -1,0 +1,43 @@
+.loader {
+    width:20px;
+    height:20px;
+    background:rgb(35, 38, 83);
+    box-shadow:0 0 60px 15px rgb(35, 38, 83);
+    transform: translate(30px);
+    clip-path:inset(0);
+    animation:
+      w4-1 1s ease-in-out infinite alternate,
+      w4-2 2s   ease-in-out infinite;
+  }
+  
+  @keyframes w4-1 {
+    0% {transform:translateX(30px)}
+    100% {transform:translateX(490px)}
+  }
+  
+  @keyframes w4-2 {
+     33% {clip-path:inset(0 0 0 -100px)}
+     50% {clip-path:inset(0 0 0 0)     }
+     83% {clip-path:inset(0 -100px 0 0)}
+  }
+
+@media screen and (max-width: 1550px) {
+  @keyframes w4-1 {
+    100% {transform:translateX(450px)}
+  }
+}
+@media screen and (max-width: 1300px) {
+  @keyframes w4-1 {
+    100% {transform:translateX(470px)}
+  }
+}
+@media screen and (max-width: 940px) {
+  @keyframes w4-1 {
+    100% {transform:translateX(75vw)}
+  }
+}
+@media screen and (max-width: 600px) {
+  @keyframes w4-1 {
+    100% {transform:translateX(55vw)}
+  }
+}
