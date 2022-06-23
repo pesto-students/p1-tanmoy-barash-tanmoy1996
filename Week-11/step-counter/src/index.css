@@ -1,0 +1,12 @@
+.btn{
+    border:none;
+    width:200px;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 5px 0;
+    font-weight: 500;
+}
+.purple{
+    background-color: blueviolet;
+    color:white;
+}
