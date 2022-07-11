@@ -1,0 +1,21 @@
+.form{
+    padding: 8px;
+}
+.form .textfield{
+    width:auto;
+    margin-bottom: 8px;
+}
+.ml-auto{
+    margin-left: auto ;
+}
+.btn-cancel{
+    border:none;
+    height:43px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: crimson;
+}
