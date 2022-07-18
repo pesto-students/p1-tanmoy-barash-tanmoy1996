@@ -15,6 +15,7 @@ router.post('/', async (req,res, next)=>{
 
     const income = new Income(validatedIncome);
     const savedIncome = await income.save();
+    await income.sendMail(user.email);
     
     res.send({
       title: savedIncome.title,

@@ -15,7 +15,7 @@ router.post('/', async (req,res, next)=>{
 
     const expense = new Expense(validatedExpense);
     const savedExpense = await expense.save();
-    
+    await expense.sendMail(user.email)
     res.send({
       title: savedExpense.title,
       amount: savedExpense.amount,
