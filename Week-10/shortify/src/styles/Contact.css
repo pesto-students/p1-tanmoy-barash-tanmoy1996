@@ -1,0 +1,42 @@
+.Contact>h1{
+    font-size: 52px;
+    color:rgb(35, 38, 83);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col{
+    width:28%;
+    background: rgba(35, 38, 83, 0.856);
+    color: #fff;
+    padding: 24px;
+    margin: 8px;
+    margin-top: 40px;
+    height:180px;
+    border-radius: 5px;
+    position: relative;
+}
+.col .contactBtn{
+    position: absolute;
+    top:-30px;
+    left: calc(50% - 30px);
+    height:60px;
+    width:60px;
+    font-size: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: rgb(255, 210, 236);
+    color: rgba(35, 38, 83, 0.856);
+    box-shadow: 1px 1px 10px -2px rgb(161, 161, 161);
+}
+
+@media screen and (max-width: 940px) {
+    .col{
+        width:100%;
+    }
+}

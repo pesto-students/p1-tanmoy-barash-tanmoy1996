@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="./images/favicon.ico" >
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Form</title>
+</head>
+<body class="bg">
+    <main class="content">
+        <section class="gallery">
+            <h1 class="gallery__heading">Gallery</h1>
+            <p class="gallery__subheading">Uploaded Pictures</p>
+            <div id="gallery" class="gallery__images">
+                <p>No images are present here. Please upload!!</p>
+            </div>
+        </section>
+        <section class="card">
+            <input 
+            type="text" 
+            autofocus
+            name="username" 
+            id="username"
+            class="card__textfield"
+            placeholder="Username"/>
+            
+            <input 
+            type="email" 
+            name="email"
+            id="email"
+            class="card__textfield" 
+            placeholder="Email"/>
+    
+            <button
+            class="card__button login"
+            onclick="login()">
+            Log In</button>
+            <hr/>
+            <input 
+            id="pic"
+            type="file" 
+            name="pics"
+            multiple
+            class="card__fileSelector" 
+            accept =".png, .jpg, .JPG"/>
+
+            <button
+            class="card__button"
+            onclick="upload()">
+            Upload Images</button>
+        </section>
+        
+
+    </main>
+</body>
+</html>
